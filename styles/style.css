@@ -1,0 +1,526 @@
+
+* {
+	box-sizing:border-box;
+	/* font-family: 'Montserrat', sans-serif; */
+	font-family: 'Anton', sans-serif;
+}
+.header{
+	background-color: white;
+	
+	height: 100vh;
+}
+
+/* contact fixe*/
+.recrute_title{
+	width: 10vh;
+	height: 4vh;
+	border-top-right-radius:25px;
+	border-bottom-right-radius:25px;
+	background-color: rgba(43, 47, 102);
+	color:white;
+	position :fixed;
+	top:50vh;
+	z-index: 100;
+	margin-left: -1vh;
+	box-shadow: 10px 5px 5px  black;
+	transition: transform .2s;
+}
+
+#contact_rec{
+	width: 50%;
+	margin: auto;
+}
+
+#contact-form {
+	margin: auto;
+	background-color:rgba(43, 47, 102,0.8);
+	padding: 10px 20px 30px 20px;
+	max-width:100%;
+	border-radius:7px;
+	/* margin-top:15vh; */
+	margin: 5vh;
+	-webkit-border-radius:7px;
+	-moz-border-radius:7px;
+ }
+ #contact-form input,   
+ #contact-form select,   
+ #contact-form textarea,   
+ #contact-form label { 
+	font-size: 15px;  
+	margin-bottom: 2px;
+	font-family: Arial, san-serif;
+ } 
+ #contact-form label{
+	 width: 100%;
+ }
+ #contact-form input,   
+ #contact-form select,   
+ #contact-form textarea { 
+	width:100%;
+	background: #fff;
+	border: 0; 
+	-moz-border-radius: 4px;  
+	-webkit-border-radius: 4px;  
+	border-radius: 4px;
+	margin-bottom: 25px;  
+	padding: 5px;  
+ }  
+ #contact-form input:focus,   
+ #contact-form select:focus,   
+ #contact-form textarea:focus {  
+	background-color: #E5E6E7; 
+ }  
+ #contact-form textarea {
+	width:100%;
+	height: 150px;
+ }
+ #contact-form input[type="submit"] {
+	cursor:pointer;
+	width:100%;
+	border:none;
+	background:rgba(43, 47, 102);
+	color:#FFF;
+	margin:0 0 5px;
+	padding:10px;
+	border-radius:5px;
+ }
+ #contact-form button[type="submit"]:hover {
+	background-image:linear-gradient(bottom, #9C215A 0%, #A82767 52%);
+	background-image:-moz-linear-gradient(bottom, #9C215A 0%, #A82767 52%);
+	background-image:-webkit-linear-gradient(bottom, #9C215A 0%, #A82767 52%);
+	-webkit-transition:background 0.3s ease-in-out;
+	-moz-transition:background 0.3s ease-in-out;
+	transition:background-color 0.3s ease-in-out;
+ }
+ #contact-form button[type="submit"]:active {
+	box-shadow:inset 0 1px 3px rgba(0,0,0,0.5);
+ }
+ input:required, textarea:required {  
+	box-shadow: none;
+	-moz-box-shadow: none;  
+	-webkit-box-shadow: none;  
+	-o-box-shadow: none;  
+ } 
+ #contact-form .required {  
+	font-weight:bold;  
+	color: #E5E6E7;      
+ }
+ 
+ /* Hide success/failure message
+	(especially since the php is missing) */
+ #failure, #success {
+	color: #6EA070; 
+	display:none;  
+ }
+ 
+.recrute_title:hover{
+	transform: scale(1.5);
+	width: 11vh;
+	padding-left: 1vh;
+}
+.recrute_title>div{
+	padding: 1vh;
+	text-align: center;
+
+	font-family: arial !important;
+	animation: arrow  linear 1.5s infinite alternate ;
+	cursor: pointer;
+}
+.wrapp_recrute{
+	background-color: rgba(0, 0, 0, 0.8);
+	width:200vh;
+	height: 100vh;
+	display: none;
+	position : fixed;
+	z-index: 10;
+	top: 0;
+}
+.wrapp_recrute>.recrute{
+	width:50%;
+}
+.recrute{
+	margin:auto
+}
+/*progress site*/
+#myProgress {
+	width: 100%;
+	background-color: grey;
+  }
+  
+  #myBar {
+	width: 1%;
+	height: 1vh;
+	border-radius: 25px;
+	background-color: rgb(49, 57, 179);;
+  }
+.uk-heading-line{
+	color: rgba(43, 47, 102);
+}
+/*fleche titre anim*/
+.container_arrow {
+	position: relative;
+	width: 24px;
+	height: 24px;
+	margin: auto;
+  }
+  
+  .chevron {
+	position: absolute;
+	width: 28px;
+	height: 8px;
+	opacity: 0;
+	transform: scale3d(0.5, 0.5, 0.5);
+	animation: move 3s ease-out infinite;
+  }
+  
+  .chevron:first-child {
+	animation: move 3s ease-out 1s infinite;
+  }
+  
+  .chevron:nth-child(2) {
+	animation: move 3s ease-out 2s infinite;
+  }
+  
+  .chevron:before,
+  .chevron:after {
+	content: ' ';
+	position: absolute;
+	top: 0;
+	height: 100%;
+	width: 51%;
+	background: rgba(43, 47, 102);
+  }
+  
+  .chevron:before {
+	left: 0;
+	transform: skew(0deg, 30deg);
+  }
+  
+  .chevron:after {
+	right: 0;
+	width: 50%;
+	transform: skew(0deg, -30deg);
+  }
+  
+  @keyframes move {
+	25% {
+	  opacity: 1;
+  
+	}
+	33% {
+	  opacity: 1;
+	  transform: translateY(30px);
+	}
+	67% {
+	  opacity: 1;
+	  transform: translateY(40px);
+	}
+	100% {
+	  opacity: 0;
+	  transform: translateY(55px) scale3d(0.5, 0.5, 0.5);
+	}
+  }
+  
+  .text {
+	display: block;
+	margin-top: 75px;
+	margin-left: -30px;
+	font-family: "Helvetica Neue", "Helvetica", Arial, sans-serif;
+	font-size: 12px;
+	color: #fff;
+	text-transform: uppercase;
+	white-space: nowrap;
+	opacity: .25;
+	animation: pulse 2s linear alternate infinite;
+  }
+  /*nav*/
+  .uk-sticky-fixed{
+	  padding: 0;
+  }
+  .fixe{ 
+	  padding:0;
+  }
+  .active{
+	color: white !important;
+}
+  @keyframes pulse {
+	to {
+	  opacity: 1;
+	}
+  }
+  /*presentation*/
+  .presentation{
+	  background-color: white;
+	}
+	
+	.cont_pres{
+		height:100vh;
+	  text-align: center;
+  }
+
+
+  /*compétences*/
+.compe{
+	/* height:100vh; */
+	margin-top: 15vh;
+	background-color: white;
+	padding-top: 15vh;
+}
+.flex_compe{
+	width:50%;
+}
+.detail_compe{
+	margin: auto;
+	background-color: white;
+	padding :2em;
+	justify-content: space-evenly;
+}
+  /*progressBar*/
+  #js-progressbar{
+	  background-color: red;
+  }
+  .uk-progress-bar{
+	background:red;
+}
+  .progress {
+    background-color: #f3f3f3;
+    border: 0;
+    height: 2.5em;
+    width: 100%;
+}
+
+.progressBar,.progressBar1,.progressBar2,.progressBar3,.progressBar4,.progressBar5,.progressBar5{
+	margin: auto !important;
+}
+.img_compe{
+	width:60px;
+	margin: auto;
+	padding: 0.4em;
+}
+.midle_prog{
+	text-align: center;
+}
+
+#progressBar {
+    width: auto;
+    height: 22px;
+    border: 1px solid #111;
+    background-color: white;
+}
+#progressBar div {
+    height: 100%;
+    color: #fff;
+    text-align: right;
+    line-height: 22px; /* same as #progressBar height if we want text middle aligned */
+    width: 0;
+    background-color: rgba(43, 47, 102);
+}
+
+#progressBar1 {
+    width: auto;
+    height: 22px;
+    border: 1px solid #111;
+    background-color: white;
+}
+#progressBar1 div {
+    height: 100%;
+    color: #fff;
+    text-align: right;
+    line-height: 22px; /* same as #progressBar height if we want text middle aligned */
+    width: 0;
+    background-color: rgba(43, 47, 102);
+}
+#progressBar2 {
+    width: auto;
+    height: 22px;
+    border: 1px solid #111;
+    background-color: white;
+}
+#progressBar2 div {
+    height: 100%;
+    color: #fff;
+    text-align: right;
+    line-height: 22px; /* same as #progressBar height if we want text middle aligned */
+    width: 0;
+    background-color: rgba(43, 47, 102);
+}
+#progressBar3 {
+    width: auto;
+    height: 22px;
+    border: 1px solid #111;
+    background-color: white;
+}
+#progressBar3 div {
+    height: 100%;
+    color: #fff;
+    text-align: right;
+    line-height: 22px; /* same as #progressBar height if we want text middle aligned */
+    width: 0;
+    background-color: rgba(43, 47, 102);
+}
+#progressBar4 {
+    width: auto;
+    height: 22px;
+    border: 1px solid #111;
+    background-color: white;
+}
+#progressBar4 div {
+    height: 100%;
+    color: #fff;
+    text-align: right;
+    line-height: 22px; /* same as #progressBar height if we want text middle aligned */
+    width: 0;
+    background-color: rgba(43, 47, 102);
+}
+#progressBar5 {
+    width: auto;
+    height: 22px;
+    border: 1px solid #111;
+    background-color: white;
+}
+#progressBar5 div {
+    height: 100%;
+    color: #fff;
+    text-align: right;
+    line-height: 22px; /* same as #progressBar height if we want text middle aligned */
+    width: 0;
+    background-color: rgba(43, 47, 102);
+}
+#progressBar6 {
+    width: auto;
+    height: 22px;
+    border: 1px solid #111;
+    background-color: white;
+}
+#progressBar6 div {
+    height: 100%;
+    color: #fff;
+    text-align: right;
+    line-height: 22px; /* same as #progressBar height if we want text middle aligned */
+    width: 0;
+    background-color: rgba(43, 47, 102);
+}
+
+/*portfolio*/
+
+.hide{
+	display:none;
+	animation: none_block;
+	animation-duration: 3s;
+}
+.bloc{
+	display: block;
+	animation: block_show;
+	animation-duration: 3s;
+}
+.color{
+	background:rgba(43, 47, 102) !important;
+	color: white;
+}
+.porte_f{
+	background-color: white;
+	margin-top: 4vh;
+	padding: 15vh;
+}
+
+.projet{
+	width:40vh;
+	margin: 1em;
+}
+.projet:hover
+{
+	box-shadow: 0px 0px 150px #000000;
+	z-index: 2;
+	padding-bottom: 0;
+	/* margin:auto; */
+	transition: all 500ms ease-in;
+	transform: scale(1.2);
+	height: auto;
+}
+.title_projet{
+	margin: 2em;
+	border: 1px solid rgba(43, 47, 102);
+	width: 25%;
+	text-align: center;
+}
+/* cv */
+.cv{
+	height: 100vh;
+	margin-top: 4vh;
+	background-color: white;
+	padding-top: 15vh;
+}
+.img_cv{
+	width: 350px;
+	height:350px;
+	overflow: hidden;
+	border-radius: 50%;
+	top: -4vh;
+	border: 2px solid black;
+	right: 15vh;
+	animation-name: flash_border;
+	animation-duration: 4s;
+	/* animation-timing-function: linear;
+  	animation-iteration-count: infinite; */
+}
+@keyframes flash_border {
+	0% {
+		width:0;
+		height: 0;
+		border-color: white;
+	}
+	100% {
+		width: 346px;
+		height: 346px;
+		border-color: black;
+	}
+  }
+  /* contact */
+  .contact{
+	width: 75%;
+	margin: auto;
+	height: 100vh;
+	margin-top: 4vh;
+	
+}
+.contact>h1{
+	background-color: white;
+}
+/* footer*/
+
+.footer{
+	height: 25vh;
+	background-color: white;
+}
+.link{
+	display: flex;
+	justify-content: flex-end;
+	padding: 3vh;
+}
+.social{
+	display: flex;
+	width: 150px;
+	justify-content: space-evenly;
+	margin: auto;
+}
+.social>div{
+	width: 50px;
+	height: 50px;
+}
+.flex_mess{ 
+	display: flex;
+	flex-wrap: wrap;
+}
+.mess{
+	background:ivory;
+	border: 1px solid black;
+	width:250px; 
+	height:250px;
+	margin:auto;
+	word-wrap: break-word;
+	margin-bottom: 1em;
+	padding: 1em;
+}
+.mess div p{
+	padding: 0;
+}
